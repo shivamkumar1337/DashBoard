@@ -7,18 +7,20 @@ import DataDisplay from "./components/widget/DataDisplay";
 function App() {
   const [dataTableList, setDataTableList] = useState([]);
 
-  const addNewDataTable = (graphType,theme) => {
+  const addNewDataTable = (graphType, theme) => {
     setDataTableList([
       ...dataTableList,
-      <DataDisplay key={dataTableList.length} graphType={graphType} theme={theme}/>,
+      <DataDisplay key={dataTableList.length} graphType={graphType} theme={theme} />,
     ]);
     console.log(theme);
   };
 
   return (
     <div className="flex flex-row h-screen">
-      <div className="w-16"><Header /></div>
-      <div className="flex flex-col flex-grow w-full">
+      <div className="w-16">
+        <Header />
+      </div>
+      <div className="flex flex-col w-full h-full">
         <Tabs addNewDataTable={addNewDataTable} />
         <div className=" bg-[#F4F4FF] flex-grow">
           <Body dataTableList={dataTableList} />

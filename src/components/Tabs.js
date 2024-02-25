@@ -22,7 +22,7 @@ const Tabs = ({addNewDataTable}) => {
   };
 
   return (
-    <div className="flex flex-row bg-[#FFFFFF] border border-[#EAECF0] justify-between p-1">
+    <div className="flex flex-row bg-[#FFFFFF] border border-[#EAECF0] justify-between p-1 h-16 w-full">
       <div className="flex flex-row">
         <button 
           className={`flex items-center justify-center m-1 p-2 w-10 rounded-lg ${selectedButton === 'logo' ? 'bg-[#F7F6FD] text-[#5E5ADB]' : 'text-[#8D8D8D]'} `}

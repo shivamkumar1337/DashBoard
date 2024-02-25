@@ -7,7 +7,7 @@ import Avatar from "../utils/Avatar.png";
 
 const Header = () => {
   return (
-    <div className="flex flex-col bg-[#FFFFFF] border border-[#EAECF0] justify-between p-2">
+    <div className="fixed top-0 left-0 h-full w-16 z-10 flex flex-col bg-[#FFFFFF] border border-[#EAECF0] justify-between p-2">
       <div className="flex flex-col mt-2">
         <button className="flex-none m-2">
           <img src={L2493} alt="logo" className="w-10 h-10" />

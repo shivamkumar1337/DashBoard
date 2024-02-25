@@ -5,13 +5,12 @@ import Cross from "../utils/Cross.png";
 import Settings from "../utils/Settings.png";
 import CreateWidget from './CreateWidget';
 
-const Tabs = () => {
+const Tabs = ({addNewDataTable}) => {
   const [isCreateWidgetOpen, setIsCreateWidgetOpen] = useState(false);
   const [selectedButton, setSelectedButton] = useState(null);
 
   const handleAddWidgetClick = () => {
     setIsCreateWidgetOpen(true);
-    // <CreateWidget/>
   };
 
   const handleCloseAddWidget = () => {
@@ -76,7 +75,7 @@ const Tabs = () => {
         <button className="flex items-center justify-center m-1 p-2 text-gray-700">
           <img src={Settings} alt="settings" className="" />
         </button>
-        {isCreateWidgetOpen && <CreateWidget onClose={handleCloseAddWidget} />}
+        {isCreateWidgetOpen && <CreateWidget onClose={handleCloseAddWidget} addNewDataTable={addNewDataTable}/>}
       </div>
     </div>
   );

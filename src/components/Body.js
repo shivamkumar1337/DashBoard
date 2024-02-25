@@ -1,14 +1,13 @@
-import Card from "./Card";
-import Tabs from "./Tabs";
-
-const Body=()=>{
-   return (
-   <div className="flex flex-col flex-grow bg-[#F4F4FF]">
-        <Tabs/>
-        <div className=" flex flex-grow m-5">
-        <Card/>
+const Body = ({ dataTableList }) => {
+  return (
+    <div className="flex flex-grow flex-wrap justify-center h-60">
+      {dataTableList.map((dataTable, index) => (
+        <div key={index} className="m-2">
+          {dataTable}
         </div>
-      </div>)
-}
+      ))}
+    </div>
+  );
+};
 
 export default Body;

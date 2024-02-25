@@ -23,7 +23,7 @@ const CreateWidget = ({ onClose, addNewDataTable }) => {
   };
   return (
     <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-20 z-50">
-      <div className="bg-white  w-3/6 h-fit rounded-lg shadow-md flex flex-col">
+      <div className="bg-white  w-fit h-fit rounded-lg shadow-md flex flex-col">
         <CreateWidgetHeader onClose={onClose} />
         <div className="flex flex-grow p-4">
           <Preview selectedGraph={selectedGraph} selectedButton={selectedButton} handleButtonClick={handleButtonClick}/>
@@ -31,10 +31,7 @@ const CreateWidget = ({ onClose, addNewDataTable }) => {
             <p className="text-[#888891] text-sm">COMPONENTS</p>
             <div className="flex flex-col">
               <div
-                className={`border rounded-lg mb-1 px-4 py-2 cursor-pointer ${
-                  selectedGraph === "Data" ? "border-[#5E5ADB] shadow" : "border-[#E4E4E7]"
-                }`}
-                onClick={() => handleGraphSelection("Data")}
+                className="border rounded-lg mb-1 px-4 py-2 cursor-pointer border-[#5E5ADB] shadow"
               >
                 <p className="text-[#585858]">Data</p>
                 <p className="text-[#888891] text-xs">Random Description</p>
@@ -70,19 +67,15 @@ const CreateWidget = ({ onClose, addNewDataTable }) => {
                 </div>
               </div>
               <div
-                className={`border rounded-lg mb-1 px-4 py-2 cursor-pointer ${
-                  selectedGraph === "Summary" ? "border-[#5E5ADB] shadow" : "border-[#E4E4E7]"
-                }`}
-                onClick={() => handleGraphSelection("Summary")}
-              >
+                className="border rounded-lg mb-1 px-4 py-2 cursor-pointer border-[#E4E4E7]">
                 <p className="text-[#585858]">Summary</p>
                 <p className="text-[#888891] text-xs">Random Description</p>
               </div>
             </div>
-            <div className="flex flex-row mt-2">
-              <button className="border rounded-lg m-1 p-3 w-1/5 bg-[#F8F8FF] border-[#E0DFF8]" onClick={()=>(handleGraphSelection("table"))}>
+            <div className="flex flex-row mt-2 justify-end">
+              <button className="border rounded-lg m-1 w-1/5 bg-[#F8F8FF] border-[#E0DFF8]" onClick={()=>(handleGraphSelection("table"))}>
                 {" "}
-                <img src={ccicon} alt="Button 1" className="" />
+                <img src={ccicon} alt="Button 1" className="h-fit w-fit"/>
               </button>
               <button className="border rounded-lg m-1 p-3 w-2/5 text-[#585858]" onClick={onClose}>Cancel</button>
               <button className="border rounded-lg m-1 p-3 w-2/5 bg-[#5E5ADB] text-white" onClick={handleSave}>

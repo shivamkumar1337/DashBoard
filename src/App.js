@@ -18,9 +18,9 @@ function App() {
   return (
     <div className="flex flex-row h-screen">
       <div className="w-16"><Header /></div>
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col flex-grow w-full">
         <Tabs addNewDataTable={addNewDataTable} />
-        <div className="overflow-x-auto bg-[#F4F4FF] flex-grow ">
+        <div className=" bg-[#F4F4FF] flex-grow">
           <Body dataTableList={dataTableList} />
         </div>
       </div>

@@ -1,6 +1,6 @@
 const Body = ({ dataTableList }) => {
   return (
-    <div className="flex flex-grow flex-wrap justify-center h-60">
+    <div className="flex flex-grow flex-wrap justify-center">
       {dataTableList.map((dataTable, index) => (
         <div key={index} className="m-2">
           {dataTable}
